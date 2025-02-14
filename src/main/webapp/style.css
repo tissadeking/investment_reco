@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+h2 {
+	/*position: relative;
+	vertical-align:middle;*/
+	text-align: center;
+}
+
+
+/*cSS to grey out the select box when disabled */
+select:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+/*newly added to enhance*/
+body {
+    background: linear-gradient(to bottom right, #d4f1f4, #76e6da);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Container */
+form {
+    width: 100%;
+    height: 95%;
+    margin: 0px auto;
+    padding: 20px;
+    background: #e6f9f2;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid #67c8a7;
+}
+table {
+	width: 100%;
+	height: 100%;
+}
+/* Form Header */
+/*h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff;
+    padding: 5px;
+    background: #55a958;
+    border-radius: 10px 10px 0 0;
+    margin: -20px -20px 20px -20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}*/
+
+/* Input Fields */
+form input[type="text"], 
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 2px solid #67c8a7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus, 
+form select:focus {
+    outline: none;
+    border-color: #45a149;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Radio Buttons */
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Buttons */
+form button {
+    width: 45%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+form button[type="submit"] {
+    background-color: #45a149;
+    margin-right: 5%;
+}
+
+form button[type="reset"] {
+    background-color: #d9534f;
+}
+
+form button[type="submit"]:hover {
+    background-color: #367c3c;
+}
+
+form button[type="reset"]:hover {
+    background-color: #b52b29;
+}
+/*.change{
+	margin-left: 180px;
+}
+.change2 {
+	margin-right: 180px;
+}*/
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+
+    form button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

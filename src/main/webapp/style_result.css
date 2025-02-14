@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+body {
+	/*background-color: lightyellow;*/
+	/*background-color: #ffffcc;*/
+	/*background-image: url("loan_check/src/main/webapp/images/pencil.jpg");*/
+	/*background-image: url("/images/pencil.jpg");*/
+	/*background-color: #ccffff;*/
+	
+}
+h2 {
+	/*position: relative;
+	vertical-align:middle;*/
+	text-align: center;
+}
+/*form {
+	background-color: #ccffff;
+	background-color: #ccffcc;
+	
+}*/
+
+/*.change{
+	margin-left: 180px;
+}
+.change2 {
+	margin-right: 180px;
+}*/
+
+/* CSS to grey out the select box when disabled */
+select:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+/*btn not needed*/
+.btns{
+	/*display: block;
+	/*position: relative;
+    justify-content: center;
+    align-items: center;*/
+}
+
+/*Newly added to enhance*/
+/* General Styles */
+body {
+    /*background: linear-gradient(to bottom right, #d4f1f4, #76e6da);*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+}
+
+/* Form Container */
+form {
+    width: 100%;
+    height: 95%;
+    margin: 0px auto;
+    padding: 20px;
+    background: #e6f9f2;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid #67c8a7;
+}
+
+div {
+	margin-left: 300px;
+    margin-right: 180px;
+    display: block;
+	position: relative;
+    justify-content: center;
+}
+
+table {
+	width: 90%;
+	height: 70%;
+	font-size: 1.3rem;
+	/*display: block;
+	position: relative;
+    justify-content: center;*/
+    /*align-items: center;*/
+    
+}
+.table tr {
+	/*width: 80%;
+	height: 80%;*/
+	padding: 5px;
+	height: 0.05%;
+}
+.table {
+  border-collapse: collapse; !important; /* Ensures padding doesn't add extra space */
+}
+
+table tr {
+  height: 5px; !important; /* Sets the row height */
+}
+
+.table td, .table th {
+  padding: 5px; !important; /* Reduces cell padding */
+  line-height: 1.2; !important;/* Reduces line spacing */
+}

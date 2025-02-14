@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<style>
+    
+</style>
+<link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" 
+          href="style.css" />
+<!-- jQuery library -->
+<script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<!-- style="background-color: lightyellow" -->
+<body class="container-fluid">
+    <!-- <div class="card" style="width: 800px; height:1000px; margin: auto; margin-top: 50px">-->
+    <div style="width: 800px; height:1000px; margin: auto; margin-top: 50px; margin-bottom: 50px">
+        <h2 class="bg-success text-light card-header">Investment Recommender</h2>
+        <form class="form" action="result" method="post">
+            <!-- <table class="table table-hover table-striped">-->
+            <table class="table-hover table-striped">
+                <tr">
+                    <td>Name</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <!-- <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female</td>
+                </tr> -->
+                <tr>
+                    <td>Qualification</td>
+                    <td><select name="qlfy">
+                            <option value="" selected="selected">Select</option>
+                            <option value="ond">OND, NCE or similar</option>
+                            <option value="degree">HND or Bachelor</option>
+                            <option value="masters">Master</option>
+                            <option value="phd">PhD</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Business (Field)</td>
+                    <td><select name="field">
+                            <option value="" selected="selected">Select</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Education">Education</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Sales and Marketing">Sales and Marketing</option>
+                            <option value="Law">Law</option>
+                            <option value="Religion">Religion</option>
+                            <option value="Supply Chain and Logistics">Supply Chain and Logistics</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Others">Others</option>
+                    </select></td>
+                </tr>
+                <!-- <tr>
+                    <td>Role in the Business</td>
+                    <td><input type="text" name="occupation"></td>
+                </tr> -->
+                <tr>
+                    <td>Investment Amount Requested (Naira)</td>
+                    <td><input type="text" name="amount"></td>
+                </tr>
+                <tr>
+                    <td>Monthly Profit from Business (Naira)</td>
+                    <td><input type="text" name="profit"></td>
+                </tr>
+                <!-- <tr>
+                    <td>Family Breadwinner</td>
+                    <td><input type="radio" name="bread" value="yes">Yes
+                        <input type="radio" name="bread" value="no">No</td>
+                </tr>-->
+                <tr>
+                    <td>Dependents</td>
+                    <td><select name="dependents">
+                            <option value="" selected="selected">Select</option>
+                            <option value="none">0</option>
+                            <option value="one">1</option>
+                            <option value="two_three">2 - 3</option>
+                            <option value="four_above">Above 3</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Landed Property Ownership</td>
+                    <td><input type="radio" name="land" id="landYes" value="yes">Yes
+                        <input type="radio" name="land" id="landNo" value="no">No</td>
+                </tr>
+                <tr>
+                    <td>If Yes, Worth of Property (Naira)</td>
+                    <td><select name="property_worth" id="property_worth">
+                            <option value="" selected="selected">Select</option>
+                            <option value="1m_land">Less than 1m</option>
+                            <option value="4m_land">Between 1m and 3.99m</option>
+                            <option value="10m_land">Between 4m and 10m</option>
+                            <option value="above_10m_land">Above 10m</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Other Investments</td>
+                    <td><input type="radio" name="investment" id="investmentYes" value="yes">Yes
+                        <input type="radio" name="investment" id="investmentNo" value="no">No</td>
+                </tr>
+                <tr>
+                    <td>If Yes, Worth of Investments (Naira)</td>
+                    <td><select name="investment_worth" id="investment_worth">
+                            <option value="" selected="selected">Select</option>
+                            <option value="1m_invest">Less than 1m</option>
+                            <option value="4m_invest">Between 1m and 3.99m</option>
+                            <option value="10m_invest">Between 4m and 10m</option>
+                            <option value="above_10m_invest">Above 10m</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Criminal Record</td>
+                    <td><input type="radio" name="crime" id="crimeYes" value="yes">Yes
+                        <input type="radio" name="crime" id="crimeNo" value="no">No</td>
+                </tr>
+                <tr>
+                    <td>If Yes, were you incarcerated?</td>
+                    <td><select name="incarceration" id="incarceration">
+                            <option value="" selected="selected">Select</option>
+                            <option value="no">No, never been incarcerated</option>
+                            <option value="one_year">Yes, but for one year or less</option>
+                            <option value="above_one">Yes, for above one year</option>
+                            <!--<option value="above_10m_land">Above 10m</option>-->
+                    </select></td>
+                </tr>
+                <!--<tr>
+                    <td>Hobbies</td>
+                    <td><input type="checkbox" name="hb" value="reading">Reading
+                        <input type="checkbox" name="hb" value="watching">Web
+                        Series <input type="checkbox" name="hb" value="playing">Cricket
+                        <input type="checkbox" name="hb" value="traveller">Travel
+                    </td>
+                </tr> -->
+                <!-- <div class="btns">
+                	
+	                
+                	<!-- <tr>
+	                    <td><button type="submit" class="btn btn-outline-success">Evaluate</button></td>
+	                    <td><button type="reset" class="btn btn-outline-danger">Reset</button></td>
+	                </tr>
+                </div>-->
+                <tr class="btns">
+                	<td><button type="submit" class="change btn btn-outline-success">Evaluate</button></td>
+	                <td><button type="reset" class="change2 btn btn-outline-danger">Reset</button></td>
+	            </tr>
+                
+            </table>
+        </form>
+    </div>
+    
+    <script>
+        //javaScript to enable/disable the select box based on radio button selection
+        const landYes = document.getElementById('landYes');
+        const landNo = document.getElementById('landNo');
+        const landWorth = document.getElementById('property_worth');
+
+        //add event listeners to the radio buttons
+        landYes.addEventListener('change', () => {
+            if (landYes.checked) {
+                landWorth.disabled = false; //enable the select box
+            }
+        });
+
+        landNo.addEventListener('change', () => {
+            if (landNo.checked) {
+                landWorth.disabled = true; //disable the select box
+                landWorth.value = ""; //reset the selected value
+            }
+        });
+        
+     	//javaScript to enable/disable the select box based on radio button selection
+        const investmentYes = document.getElementById('investmentYes');
+        const investmentNo = document.getElementById('investmentNo');
+        const investmentWorth = document.getElementById('investment_worth');
+
+        //add event listeners to the radio buttons
+        investmentYes.addEventListener('change', () => {
+            if (investmentYes.checked) {
+            	investmentWorth.disabled = false; //enable the select box
+            }
+        });
+
+        investmentNo.addEventListener('change', () => {
+            if (investmentNo.checked) {
+            	investmentWorth.disabled = true; //disable the select box
+            	investmentWorth.value = ""; //reset the selected value
+            }
+        });
+        
+     	//enable/disable the select box based on radio button selection
+        const crimeYes = document.getElementById('crimeYes');
+        const crimeNo = document.getElementById('crimeNo');
+        const incarceration = document.getElementById('incarceration');
+
+        //add event listeners to the radio buttons
+        crimeYes.addEventListener('change', () => {
+            if (crimeYes.checked) {
+            	incarceration.disabled = false; //enable the select box
+            }
+        });
+
+        crimeNo.addEventListener('change', () => {
+            if (crimeNo.checked) {
+            	incarceration.disabled = true; //disable the select box
+            	incarceration.value = ""; //reset the selected value
+            }
+        });
+    </script>
+</body>
+</html>
