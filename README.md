@@ -25,6 +25,6 @@ It does this by evaluating information about the business and also the business 
   - You should see Tomcat v9.0 Server at localhost [Stopped, Republish] under Servers tab.
   - Right-click on Server and click Start. If there is any application running on default port 8080 then change it to any other port.
 
-# Accessing the webapp
+## Accessing the webapp
 - Go to http://localhost:8080/investment_check and view the app.
 
