@@ -28,3 +28,7 @@ It does this by evaluating information about the business and also the business 
 ## Accessing the webapp
 - Go to http://localhost:8080/investment_check and view the app.
 
+## Software Architecture
+![Description of Image](investment_archi.png)
+
+
