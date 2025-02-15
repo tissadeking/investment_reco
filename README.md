@@ -31,4 +31,8 @@ It does this by evaluating information about the business and also the business 
 ## Software Architecture
 ![Description of Image](investment_archi.png)
 
+## Workflows Description
+- The client enters the details about the business and the business owner through the GUI. This data contains: the amount to be invested, the amount of profits made by the business owner monthly, the worth of landed property owned by the business owner, etc. The data is received and processed by the Data Processor and sent to the Evaluation App. The Evaluation App uses the Approximation Model which is a log-transformed linear regression model trained on previous investment data of our client, to evaluate whether the desired amount should be invested in the business. If the answer is no, the Evaluation App also performs a simple optimisation to determine the suitable amount of money to be invested in the business. It forwards this result to the Data Processor which in turn translates it to natural language response to the client at the GUI.
+- The Data Processor also sends the result to the Data Storage Manager which stores the data inside the SQL Data Store for future use.
+- An additional functionality that could be implemented which is not part of the minimal viable product (MVP) of the software is the ability of the Approximation Model to receive data from the SQL Data Store and improve itself for better evaluation later. Also, the client can query the data stored in the SQL Data Store about previous investments he made or rejected, and the information about the investments would be outputted to him through the GUI.
 
